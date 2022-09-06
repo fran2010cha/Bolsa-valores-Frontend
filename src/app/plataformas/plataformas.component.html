@@ -1,0 +1,13 @@
+<div class="card border-primary mb-3">
+    <!--<div class="card-header">Plataformas Digitales</div>-->
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de plataformas</h5>
+      <div class="input-field col s12">
+        <p>
+        <select  name="miselect" [(ngModel)]="seleccionado" (change)="capturar()">
+            <option [ngValue]="objeto" *ngFor="let objeto of plataformas">{{objeto.nombre}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+

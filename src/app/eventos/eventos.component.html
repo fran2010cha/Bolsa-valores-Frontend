@@ -1,0 +1,30 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Eventos</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Eventos</h5>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>plataforma id</th>
+            <th>nombre plataforma</th>
+            <th>nombre evento</th>
+            <th>fecha</th>
+            <th>cantidad</th>
+            <th>costo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let evento of eventos">
+            <td>{{ evento.plataforma_id }}</td>
+            <td>{{ evento.nombre_plataforma }}</td>
+            <td>{{ evento.nombre_evento }}</td>
+            <td>{{ evento.fecha }}</td>
+            <td>{{ evento.cantidad }}</td>
+            <td>{{ evento.costo }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
+  

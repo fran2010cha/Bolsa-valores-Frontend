@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pruebabolsavalores-app';
+  id_plataforma:number
+  title = 'Eventos Digitales BVC';
+  plataformaid:number;
+
+  public receiveMessage(id:number){
+    this.id_plataforma = id;
+  }
 }
