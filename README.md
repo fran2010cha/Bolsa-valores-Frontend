@@ -1,27 +1,13 @@
-# PruebabolsavaloresApp
+# Estructura del proyecto:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
+Este proyecto de frontend consiste en realizar peticiones al servicio Rest creado con spring boot , con el fin de listarme los eventos para cada plataforma seleccionada, dicha implementación del frontend se llevó a cabo con el framework de angular en la versión 12.
+La estructura del proyecto está conformada por módulos y la organizacion de los componentes (plataformas, eventos) y el componente principal que es el app.comonet , cada componente esta compuesto con su respectivo archivo de typescript y el archivo de html , la clase entity y el archivo de servicios el cual tiene el llamado al servicio Rest.
 
-## Development server
+## Diseño:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+La decisión de diseño que se llevó a cabo en el proyecto se tomó teniendo en cuenta principalmente la mantenibilidad de la arquitectura , realizando el intercambio de datos entre componentes atreves del modelo de EventEmitter que observa cambios y valores y emite los datos a los componentes suscritos, evitando así inyectar referencias de componente y poder mantener así el bajo acoplamiento y la alta cohesión de nuestro código.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Análisis:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Se realizó un análisis para este proyecto de frontend el cual consiste en crear dos componentes principales que son el componente de eventos y el componente de plataformas con su respectiva clase entity y la clase de servicio , para la clase de servicio de plataforma se diseñó una función para listar las diferentes plataformas y para la clase de servicio de eventos se tiene la función para listar todos los eventos acorde a la plataforma id que se envié.
